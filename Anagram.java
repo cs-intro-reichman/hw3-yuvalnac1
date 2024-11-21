@@ -54,7 +54,7 @@ public class Anagram {
 			ch = str.charAt(i);
 			if (ch >= 'A' && ch <= 'Z'){
 				newStr += (char) (ch + 32);
-			} else if (ch >= 'a' && ch <= 'z') {
+			} else if ((ch >= 'a' && ch <= 'z') || ch == ' ') {
 				newStr += ch;
 			}
 		}
