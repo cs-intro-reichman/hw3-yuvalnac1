@@ -44,7 +44,7 @@ public class LoanCalc {
 		iterationCounter = 0;
 		double periodicalPayment = loan / n;
 		double increment = 1;
-		while (endBalance(loan, rate, n, periodicalPayment) >= epsilon && periodicalPayment <= loan){
+		while (endBalance(loan, rate, n, periodicalPayment + 1) >= 0 && periodicalPayment <= loan){
 			periodicalPayment += increment;
 			iterationCounter++;
 		}
